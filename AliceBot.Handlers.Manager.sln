@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AliceBot.Handlers.Manager", "AliceBot.Handlers.Manager\AliceBot.Handlers.Manager.csproj", "{A77F890A-0F6F-483B-A7EC-8535E5C1C705}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AliceBot.Core", "AliceBot.Core", "{9A16734B-E929-4D18-B110-8320E6A049C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AliceBot.Core", "AliceBot.Core\AliceBot.Core\AliceBot.Core.csproj", "{D53AAA15-D87B-4DEB-B88D-CF6A66468AF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AliceBot.Handlers.Manager.Test", "AliceBot.Handlers.Manager.Test\AliceBot.Handlers.Manager.Test.csproj", "{AFCD2D25-AE67-496E-8ED5-6F9A0FB30BA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AliceBot.Handlers.Manager.Test.Handlers.Test", "AliceBot.Handlers.Manager.Test.Handlers.Test\AliceBot.Handlers.Manager.Test.Handlers.Test.csproj", "{BCB8C912-7047-42A9-8A16-18435A6F14BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A77F890A-0F6F-483B-A7EC-8535E5C1C705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A77F890A-0F6F-483B-A7EC-8535E5C1C705}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A77F890A-0F6F-483B-A7EC-8535E5C1C705}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A77F890A-0F6F-483B-A7EC-8535E5C1C705}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D53AAA15-D87B-4DEB-B88D-CF6A66468AF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D53AAA15-D87B-4DEB-B88D-CF6A66468AF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D53AAA15-D87B-4DEB-B88D-CF6A66468AF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D53AAA15-D87B-4DEB-B88D-CF6A66468AF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFCD2D25-AE67-496E-8ED5-6F9A0FB30BA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFCD2D25-AE67-496E-8ED5-6F9A0FB30BA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFCD2D25-AE67-496E-8ED5-6F9A0FB30BA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFCD2D25-AE67-496E-8ED5-6F9A0FB30BA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCB8C912-7047-42A9-8A16-18435A6F14BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCB8C912-7047-42A9-8A16-18435A6F14BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCB8C912-7047-42A9-8A16-18435A6F14BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCB8C912-7047-42A9-8A16-18435A6F14BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D53AAA15-D87B-4DEB-B88D-CF6A66468AF2} = {9A16734B-E929-4D18-B110-8320E6A049C0}
+	EndGlobalSection
+EndGlobal
