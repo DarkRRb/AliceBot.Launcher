@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\AliceBot.Core\AliceBot.Core\AliceBot.Core.csproj" />
+    <ProjectReference Include="..\AliceBot.Handlers.Manager\AliceBot.Handlers.Manager\AliceBot.Handlers.Manager.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AliceBot.Launcher", "AliceBot.Launcher\AliceBot.Launcher.csproj", "{2C0DA67F-7391-4AD6-B3F0-102722C9E848}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AliceBot.Handlers.Manager", "AliceBot.Handlers.Manager", "{5687C680-4A06-4825-BC12-42C721A34C57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AliceBot.Handlers.Manager", "AliceBot.Handlers.Manager\AliceBot.Handlers.Manager\AliceBot.Handlers.Manager.csproj", "{510F8DE1-0AB0-47BB-B773-B0343580C052}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AliceBot.Core", "AliceBot.Core", "{8E09432F-9BD2-44B8-B747-59BB67DB0CEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AliceBot.Core", "AliceBot.Core\AliceBot.Core\AliceBot.Core.csproj", "{3491E33F-406E-4C35-8C93-48475DF144C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C0DA67F-7391-4AD6-B3F0-102722C9E848}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C0DA67F-7391-4AD6-B3F0-102722C9E848}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C0DA67F-7391-4AD6-B3F0-102722C9E848}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C0DA67F-7391-4AD6-B3F0-102722C9E848}.Release|Any CPU.Build.0 = Release|Any CPU
+		{510F8DE1-0AB0-47BB-B773-B0343580C052}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{510F8DE1-0AB0-47BB-B773-B0343580C052}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{510F8DE1-0AB0-47BB-B773-B0343580C052}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{510F8DE1-0AB0-47BB-B773-B0343580C052}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3491E33F-406E-4C35-8C93-48475DF144C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3491E33F-406E-4C35-8C93-48475DF144C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3491E33F-406E-4C35-8C93-48475DF144C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3491E33F-406E-4C35-8C93-48475DF144C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{510F8DE1-0AB0-47BB-B773-B0343580C052} = {5687C680-4A06-4825-BC12-42C721A34C57}
+		{3491E33F-406E-4C35-8C93-48475DF144C3} = {8E09432F-9BD2-44B8-B747-59BB67DB0CEF}
+	EndGlobalSection
+EndGlobal
