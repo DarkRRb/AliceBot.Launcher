@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.CommandLine;
 using System.CommandLine.Parsing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -41,7 +42,7 @@ public partial class ManagerHandler(Alice alice) : IHandler {
     }
 
     private async Task LoadProtocolAsync(string key, string dllPath, string typeFullName, string methodName, CancellationToken token) {
-        if (_contexts.ContainsKey(dllPath)) throw new Exception($"Plugin {dllPath} already loaded.");
+        if (_contexts.ContainsKey(key)) throw new Exception($"Plugin {key} already loaded.");
 
         PluginLoadContext? context = null;
         try {
@@ -52,13 +53,13 @@ public partial class ManagerHandler(Alice alice) : IHandler {
         } catch {
             _references.Add(key, new(context));
             context?.Unload();
-            _contexts.Remove(dllPath);
+            _contexts.Remove(key);
             throw;
         }
     }
 
     private async Task LoadHandlerAsync(string key, string dllPath, string typeFullName, string methodName, CancellationToken token) {
-        if (_contexts.ContainsKey(dllPath)) throw new Exception($"Plugin {dllPath} already loaded.");
+        if (_contexts.ContainsKey(key)) throw new Exception($"Plugin {key} already loaded.");
 
         PluginLoadContext? context = null;
         try {
@@ -69,7 +70,7 @@ public partial class ManagerHandler(Alice alice) : IHandler {
         } catch {
             _references.Add(key, new(context));
             context?.Unload();
-            _contexts.Remove(dllPath);
+            _contexts.Remove(key);
             throw;
         }
     }
@@ -79,7 +80,7 @@ public partial class ManagerHandler(Alice alice) : IHandler {
             case PluginConfig.PluginType.Protocol: {
                 await LoadProtocolAsync(
                     config.Key ?? config.DllPath,
-                    config.DllPath,
+                    Path.GetFullPath(config.DllPath),
                     config.TypeFullName,
                     config.MethodName,
                     token
@@ -89,7 +90,7 @@ public partial class ManagerHandler(Alice alice) : IHandler {
             case PluginConfig.PluginType.Handler: {
                 await LoadHandlerAsync(
                     config.Key ?? config.DllPath,
-                    config.DllPath,
+                    Path.GetFullPath(config.DllPath),
                     config.TypeFullName,
                     config.MethodName,
                     token
@@ -125,7 +126,7 @@ public partial class ManagerHandler(Alice alice) : IHandler {
         string methodName = result.GetValueForOption(CommandUtility.MethodOption)
             ?? throw new Exception("--method(method name) is required.");
 
-        await LoadProtocolAsync(key ?? dllPath, dllPath, typeFullName, methodName, token);
+        await LoadProtocolAsync(key ?? dllPath, Path.GetFullPath(dllPath), typeFullName, methodName, token);
 
         if (result.GetValueForOption(CommandUtility.DefaultOption)) {
             if (!_config.Defaults.Any(plugin => (key != null && plugin.Key == key) || plugin.DllPath == dllPath)) {
@@ -150,7 +151,7 @@ public partial class ManagerHandler(Alice alice) : IHandler {
         string methodName = result.GetValueForOption(CommandUtility.MethodOption)
             ?? throw new Exception("--method(method name) is required.");
 
-        await LoadHandlerAsync(key ?? dllPath, dllPath, typeFullName, methodName, token);
+        await LoadHandlerAsync(key ?? dllPath, Path.GetFullPath(dllPath), typeFullName, methodName, token);
 
         if (result.GetValueForOption(CommandUtility.DefaultOption)) {
             if (!_config.Defaults.Any(plugin => (key != null && plugin.Key == key) || plugin.DllPath == dllPath)) {
