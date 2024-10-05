@@ -1,0 +1,3 @@
+[submodule "AliceBot.Core"]
+	path = AliceBot.Core
+	url = https://github.com/DarkRRb/AliceBot.Core.git
